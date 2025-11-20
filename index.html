@@ -1,16 +1,106 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Task App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Make columns align horizontally on normal screens */
+    .board {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Stack columns vertically on small screens */
+    @media (max-width: 400px) {
+      .board {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form id="task-form">
+    <div class="task-form-row">
+      <input id="task-description" class="left-side" type="text" placeholder="task description" required>
+      <select id="task-status" class="right-side" name="task-status">
+        <option value="todo">ToDo</option>
+        <option value="doing">Doing</option>
+        <option value="done">Done</option>
+      </select>
+    </div>
+
+    <div class="task-form-row">
+      <div class="left-side"></div>
+      <button class="right-side" type="submit">Add</button>
+    </div>
+  </form>
+
+  <div id="tasks" class="board">
+    <div id="todo-column" class="column">
+      <div id="todo-status-heading" class="todo task-status">todo</div>
+      <div id="task-1" class="card">pack spikes for track meet</div>
+      <div id="task-2" class="card">make my bed</div>
+      <div id="task-3" class="card">walk the dog</div>
+    </div>
+
+    <div id="doing-column" class="column">
+      <div id="doing-status-heading" class="doing task-status">doing</div>
+      <div id="task-4" class="card">write draft english paper</div>
+      <div id="task-5" class="card">sanding art project</div>
+    </div>
+
+    <div id="done-column" class="column">
+      <div id="done-status-heading" class="done task-status">done</div>
+      <div id="task-6" class="card">wash the dishes</div>
+      <div id="task-7" class="card">finish math homework</div>
+      <div id="task-8" class="card">practice my trumpet</div>
+    </div>
+  </div>
+</body>
+</html>
+Megan Pfiffner
+Behavioral Special Education | Anamosa Virtual Academy Supervisor | Raider Market  |High School Technology Support | Computer Science
+Anamosa High School
+209 Sadie Street
+Anamosa, Iowa 52205
+Phone: 319-462-3594 Ext. 1523
+
+ 
+Inspire - Learn - Lead
+
+Bringing Learning to Life & Life to Learning
+
+
+It is the policy of the Anamosa Community School District not to discriminate on the basis of race, color, national origin, sex, disability, religion, creed, age (for employment), marital status (for programs), sexual orientation, gender identity and socioeconomic status (for programs) in its educational programs and its employment practices. There is a grievance procedure for processing complaints of discrimination. If you have questions or a grievance related to this policy, please contact Superintendent Darren Hanna, 200 S. Garnavillo Street, Anamosa, IA  52205, 319-462-4321, dhanna@anamosa.k12.ia.us 
+
+
+
+
+
+
+
+
+
+
+
+
+On Thu, Nov 20, 2025 at 12:58 PM James Dirks <jadirks@anamosa.k12.ia.us> wrote:
+<!DOCTYPE html>
+<html>
 
 <head>
-    <title>Task App</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @media screen and (max-width: 400px) {
-            .board {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <title>Task App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+@media (max-width: 400px) {
+  .board {
+    flex-direction: column;
+  }
+}
+  </style>
 </head>
 
 <body>
@@ -23,44 +113,32 @@
                 <option value="done">Done</option>
             </select>
         </div>
+
         <div class="task-form-row">
             <div class="left-side"></div>
             <button class="right-side" type="submit">Add</button>
         </div>
     </form>
+
     <div id="tasks" class="board">
         <div id="todo-column" class="column">
             <div id="todo-status-heading" class="todo task-status">todo</div>
-            <div id="task-1" class="card">
-                pack spikes for track meet
-            </div>
-            <div id="task-2" class="card">
-                make my bed
-            </div>
-            <div id="task-3" class="card">
-                walk the dog
-            </div>
+            <div id="task-1" class="card">pack spikes for track meet</div>
+            <div id="task-2" class="card">make my bed</div>
+            <div id="task-3" class="card">walk the dog</div>
         </div>
+
         <div id="doing-column" class="column">
             <div id="doing-status-heading" class="doing task-status">doing</div>
-            <div id="task-4" class="card">
-                write draft english paper
-            </div>
-            <div id="task-5" class="card">
-                sanding art project
-            </div>
+            <div id="task-4" class="card">write draft english paper</div>
+            <div id="task-5" class="card">sanding art project</div>
         </div>
+
         <div id="done-column" class="column">
             <div id="done-status-heading" class="done task-status">done</div>
-            <div id="task-6" class="card">
-                wash the dishes
-            </div>
-            <div id="task-7" class="card">
-                finish math homework
-            </div>
-            <div id="task-8" class="card">
-                practice my trumpet
-            </div>
+            <div id="task-6" class="card">wash the dishes</div>
+            <div id="task-7" class="card">finish math homework</div>
+            <div id="task-8" class="card">practice my trumpet</div>
         </div>
     </div>
 </body>
